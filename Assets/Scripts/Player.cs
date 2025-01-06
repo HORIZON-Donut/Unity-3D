@@ -25,10 +25,18 @@ public class Player : MonoBehaviour
         isWalking = moveDir != Vector3.zero;
 
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotatespeed);
-        Debug.Log(inputVector);
+        //Debug.Log(inputVector);
     }
     public bool IsWalking()
     {
         return isWalking;
     }
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		if(collision.gameObject.tag == "Counter")
+		{
+			Debug.Log(collision.gameObject.name);
+		}
+	}
 }

@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 4219563325966194600}
   m_Layer: 0
   m_Name: ContainerCounter_Visual
-  m_TagString: Untagged
+  m_TagString: Counter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
