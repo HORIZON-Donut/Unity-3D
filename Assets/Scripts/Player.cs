@@ -4,8 +4,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float movespeed = 5f;
     [SerializeField] private float rotatespeed = 8f;
-	[SerializeField] private Material selected;
-	[SerializeField] private Material unselected;
+	[SerializeField] public Material selected;
+	[SerializeField] public Material unselected;
 
     private bool isWalking;
 
@@ -38,7 +38,16 @@ public class Player : MonoBehaviour
 	{
 		if(collision.gameObject.tag == "Counter")
 		{
+			collision.gameObject.GetComponentInChildren<MeshRenderer>().material = selected;
 			Debug.Log(collision.gameObject.name);
+		}
+	}
+
+	private void OnCollisionExit(Collision collision)
+	{
+		if(collision.gameObject.tag == "Counter")
+		{
+			collision.gameObject.GetComponentInChildren<MeshRenderer>().material = unselected;
 		}
 	}
 }

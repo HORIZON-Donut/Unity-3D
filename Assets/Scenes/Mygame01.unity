@@ -138,6 +138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 5
   rotatespeed: 8
+  selected: {fileID: 2100000, guid: 1a0afd856a35421469b28b916116fd9c, type: 2}
+  unselected: {fileID: 592705374249410987, guid: 36694ad9cc3abc04ab48fdb0373f2037, type: 3}
 --- !u!114 &79800995
 MonoBehaviour:
   m_ObjectHideFlags: 0
