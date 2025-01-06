@@ -4,6 +4,8 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float movespeed = 5f;
     [SerializeField] private float rotatespeed = 8f;
+	[SerializeField] private Material selected;
+	[SerializeField] private Material unselected;
 
     private bool isWalking;
 
@@ -16,8 +18,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         Vector2 inputVector = new Vector2(0, 0);
-	inputVector.y = Input.GetAxisRaw("Vertical");
-	inputVector.x = Input.GetAxisRaw("Horizontal");
+		inputVector.y = Input.GetAxisRaw("Vertical");
+		inputVector.x = Input.GetAxisRaw("Horizontal");
         inputVector = inputVector.normalized;
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
         transform.position += moveDir * movespeed * Time.deltaTime;
