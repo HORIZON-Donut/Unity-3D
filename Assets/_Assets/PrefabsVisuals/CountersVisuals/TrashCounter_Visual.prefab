@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 641486972720696807}
   m_Layer: 0
   m_Name: TrashCounter_Visual
-  m_TagString: Counter
+  m_TagString: Trash bin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
